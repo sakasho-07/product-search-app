@@ -1,0 +1,35 @@
+[
+  { "id": 1, "name": "MacBook Air", "category": "PC", "price": 150000 },
+  { "id": 2, "name": "MacBook Pro", "category": "PC", "price": 250000 },
+  { "id": 3, "name": "Dell XPS", "category": "PC", "price": 180000 },
+  { "id": 4, "name": "Surface Laptop", "category": "PC", "price": 160000 },
+  { "id": 5, "name": "ThinkPad X1", "category": "PC", "price": 200000 },
+  { "id": 6, "name": "HP Pavilion", "category": "PC", "price": 110000 },
+  { "id": 7, "name": "ASUS Zenbook", "category": "PC", "price": 140000 },
+  { "id": 8, "name": "Acer Swift", "category": "PC", "price": 100000 },
+
+  { "id": 9, "name": "iPhone 17", "category": "スマホ", "price": 130000 },
+  { "id": 10, "name": "iPhone 17 Pro", "category": "スマホ", "price": 180000 },
+  { "id": 11, "name": "Google Pixel 10", "category": "スマホ", "price": 120000 },
+  { "id": 12, "name": "Galaxy S25", "category": "スマホ", "price": 140000 },
+  { "id": 13, "name": "Xperia 1 VII", "category": "スマホ", "price": 190000 },
+  { "id": 14, "name": "AQUOS sense10", "category": "スマホ", "price": 60000 },
+  { "id": 15, "name": "OPPO Reno13", "category": "スマホ", "price": 70000 },
+  { "id": 16, "name": "Xiaomi 15", "category": "スマホ", "price": 100000 },
+
+  { "id": 17, "name": "iPad Air", "category": "タブレット", "price": 100000 },
+  { "id": 18, "name": "iPad Pro", "category": "タブレット", "price": 180000 },
+  { "id": 19, "name": "iPad mini", "category": "タブレット", "price": 85000 },
+  { "id": 20, "name": "Galaxy Tab S10", "category": "タブレット", "price": 120000 },
+  { "id": 21, "name": "Surface Pro", "category": "タブレット", "price": 170000 },
+  { "id": 22, "name": "Lenovo Tab", "category": "タブレット", "price": 40000 },
+  { "id": 23, "name": "Fire HD 10", "category": "タブレット", "price": 20000 },
+
+  { "id": 24, "name": "Magic Mouse", "category": "周辺機器", "price": 12000 },
+  { "id": 25, "name": "Magic Keyboard", "category": "周辺機器", "price": 15000 },
+  { "id": 26, "name": "Logicool MX Master", "category": "周辺機器", "price": 16000 },
+  { "id": 27, "name": "AirPods Pro", "category": "周辺機器", "price": 40000 },
+  { "id": 28, "name": "Dell Monitor", "category": "周辺機器", "price": 35000 },
+  { "id": 29, "name": "Anker USB-C Hub", "category": "周辺機器", "price": 8000 },
+  { "id": 30, "name": "SanDisk SSD", "category": "周辺機器", "price": 18000 }
+]
