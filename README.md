@@ -1,36 +1,125 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 商品検索アプリ（Product Search App）
 
-## Getting Started
+Next.jsとTypeScriptを使用して作成した商品検索アプリです。
 
-First, run the development server:
+商品データをJSONファイルから取得し、商品名やカテゴリーによる検索・絞り込みができます。
+
+また、検索条件をURLのクエリパラメータと連動させることで、検索結果の共有やページ再読み込み後の条件復元にも対応しています。
+
+## 主な機能
+
+- **商品一覧表示**
+  - JSONファイルから商品データ30件を取得して表示
+- **商品名検索**
+  - 入力したキーワードを含む商品を検索
+- **カテゴリー絞り込み**
+  - PC・スマホ・タブレット・周辺機器から選択
+- **複数条件での検索**
+  - 商品名とカテゴリーを組み合わせた検索
+- **検索結果の0件表示**
+  - 該当する商品がない場合にメッセージを表示
+- **URLクエリパラメータとの連動**
+  - 検索条件をURLに反映
+  - URLから検索条件を読み込み
+  - 検索条件を含むURLを共有可能
+  - ページ再読み込み後も検索条件を復元
+
+## 使用技術
+
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
+- JavaScript
+- Git / GitHub
+
+## 学んだこと
+
+### 1. useStateによる状態管理
+
+`useState`を使用して、商品データ・検索キーワード・カテゴリーなどの状態を管理しました。
+
+入力内容が変更されたときに状態を更新し、その状態に応じて画面が再レンダリングされる仕組みを学びました。
+
+### 2. useEffectによる処理の実行
+
+`useEffect`を使用して、コンポーネントの初回表示時に商品データを取得する処理や、URLから検索条件を読み込む処理を実装しました。
+
+また、検索条件が変更されたときにURLを更新する処理も実装しました。
+
+### 3. fetchによるデータ取得
+
+`fetch`を使用して、`public/products.json`に保存した商品データを取得しました。
+
+取得したJSONデータをJavaScriptで扱える形式に変換し、Reactの状態として管理する流れを学びました。
+
+### 4. filterによる検索・絞り込み
+
+配列の`filter`メソッドを使用して、商品名とカテゴリーの条件に一致する商品だけを抽出しました。
+
+複数の検索条件を組み合わせる方法や、検索結果が0件になるケースへの対応を学びました。
+
+### 5. URLSearchParamsによるURLの操作
+
+`URLSearchParams`を使用して、URLのクエリパラメータを取得・設定する方法を学びました。
+
+検索条件をURLに反映することで、検索状態を共有・復元できる仕組みを実装しました。
+
+### 6. useEffectとURL同期の制御
+
+ページの初回表示時には、まずURLから検索条件を読み込む必要があります。
+
+そのため、`isInitialized`という状態を用意し、初期化が完了する前にURLが上書きされないように制御しました。
+
+複数の処理が実行される順番や、状態の変化によって処理が実行される仕組みについて理解を深めました。
+
+## 工夫した点・理解できたこと
+
+- 商品データと検索条件を別々の状態として管理したこと
+- 商品データを取得する処理と、検索条件をURLに反映する処理を分けたこと
+- 商品名とカテゴリーの両方に一致する場合のみ表示するようにしたこと
+- URLを共有するだけで、同じ検索条件を再現できるようにしたこと
+- 初期化前のURL上書きを防ぐため、処理の実行タイミングを制御したこと
+
+## 起動方法
+
+### 1. リポジトリをクローン
+
+```bash
+git clone https://github.com/sakasho-07/product-search-app.git
+```
+
+### 2. プロジェクトフォルダへ移動
+
+```bash
+cd product-search-app
+```
+
+### 3. パッケージをインストール
+
+```bash
+npm install
+```
+
+### 4. 開発サーバーを起動
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+ブラウザで以下にアクセスしてください。
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+http://localhost:3000
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 今後の改善予定
 
-## Learn More
+- ECサイトを想定したデザインへの変更
+- 商品画像の追加
+- お気に入り機能
+- 価格順での並び替え
+- スマートフォンに対応したレイアウト
+- UI・UXの改善
 
-To learn more about Next.js, take a look at the following resources:
+## GitHub
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+https://github.com/sakasho-07/product-search-app
