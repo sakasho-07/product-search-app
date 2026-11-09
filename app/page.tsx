@@ -7,6 +7,7 @@ type Product = {
   name: string;
   category: string;
   price: number;
+  image: string;
 };
 
 export default function Home() {
@@ -91,6 +92,11 @@ export default function Home() {
       {filteredProducts.length > 0 ? (
         filteredProducts.map((product) => (
           <div key={product.id}>
+            <img
+              src={product.image}
+              alt={product.name}
+            />
+
             <p>{product.name}</p>
             <p>{product.category}</p>
             <p>{product.price}円</p>
